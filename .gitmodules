@@ -1,15 +1,15 @@
 [submodule "riscv-binutils"]
 	path = riscv-binutils
-	url = ../riscv-binutils-gdb.git
-	branch = riscv-binutils-2.35
+	url = git://sourceware.org/git/binutils-gdb.git
+	branch = master
 [submodule "riscv-gcc"]
 	path = riscv-gcc
-	url = ../riscv-gcc.git
-	branch = riscv-gcc-10.2.0
+	url = git://gcc.gnu.org/git/gcc.git
+	branch = master
 [submodule "riscv-glibc"]
 	path = riscv-glibc
-	url = ../riscv-glibc.git
-	branch = riscv-glibc-2.29
+	url = https://sourceware.org/git/glibc.git
+	branch = master
 [submodule "riscv-dejagnu"]
 	path = riscv-dejagnu
 	url = ../riscv-dejagnu.git
@@ -20,8 +20,8 @@
 	branch = master
 [submodule "riscv-gdb"]
 	path = riscv-gdb
-	url = ../riscv-binutils-gdb.git
-	branch = fsf-gdb-10.1-with-sim
+	url = git://sourceware.org/git/binutils-gdb.git
+	branch = master
 [submodule "qemu"]
 	path = qemu
 	url = https://git.qemu.org/git/qemu.git
