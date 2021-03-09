@@ -5,10 +5,8 @@ pipeline {
   stages {
     stage('Get the source') {
       steps {
-        sh 'rm -rf riscv-gnu-toolchain'
-        sh 'git clone --shallow-since=2021-03-01 --shallow-submodules https://github.com/riscv/riscv-gnu-toolchain'
-        sh 'cd riscv-gnu-toolchain && git config -f .gitmodules submodule.*.shallow true &&  git submodule update --init'
-        sh 'cd riscv-gnu-toolchain/qemu && git checkout -f v5.2.0 && git submodule update -f  --init'
+        sh 'git submodule update --init'
+        sh 'cd qemu && git checkout -f v5.2.0 && git submodule update -f  --init'
       }
     }
     stage('build newlib-rv32i-ilp32-medlow on ubuntu2004') {
