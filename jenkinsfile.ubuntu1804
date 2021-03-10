@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Get the source') {
       steps {
-        sh 'git submodule update --init'
+        sh 'git submodule update -f --init'
       }
     }
     stage('make newlib') {
