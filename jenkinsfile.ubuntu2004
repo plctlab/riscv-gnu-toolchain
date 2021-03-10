@@ -5,6 +5,7 @@ pipeline {
   stages {
     stage('Get the source') {
       steps {
+        sh 'make clean || true'
         sh 'git submodule update -f --init'
         sh 'cd qemu && git checkout -f v5.2.0 && git submodule update -f  --init'
       }
