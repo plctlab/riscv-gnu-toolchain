@@ -2,8 +2,8 @@ name: Nightly Release
 
 on:
   schedule:
-    - cron:  '0 0 * * ?'
-
+    - cron: '0 0 * * ?'
+  workflow_dispatch:
 
 jobs:
   activity-check:
@@ -12,9 +12,9 @@ jobs:
     outputs:
       stale: ${{ steps.activity_check.outputs.stale }}
     steps:
-      - name:  Activity check
+      - name: Activity check
         id: activity_check
-        run:   |
+        run: |
           curl -sL https://api.github.com/repos/$GITHUB_REPOSITORY/commits | jq -r '[.[]][0]' > $HOME/commit.json
           date="$(jq -r '.commit.author.date' $HOME/commit.json)"
           timestamp=$(date --utc -d "$date" +%s)
@@ -41,17 +41,16 @@ jobs:
           fi
         shell: bash
 
-
   build:
     needs: activity-check
     if: needs.activity-check.outputs.stale != 'true'
-    runs-on: ${{ matrix.os }}
+    runs-on: self-hosted
     strategy:
       matrix:
-        os:       [ubuntu-20.04, ubuntu-22.04]
-        mode:     [newlib, linux, musl]
-        target:   [rv32gc-ilp32d, rv64gc-lp64d]
-        compiler: [gcc, llvm]
+        os: [ubuntu-22.04]
+        mode: [linux]
+        target: [rv32gc-ilp32d, rv64gc-lp64d]
+        compiler: [gcc]
         exclude:
           - mode: musl
             target: rv32gc-ilp32d
@@ -98,7 +97,7 @@ jobs:
         run: tar czvf riscv.tar.gz -C /opt/ riscv/
 
       - name: generate prebuilt toolchain name
-        id:   toolchain-name-generator
+        id: toolchain-name-generator
         run: |
           if [[ "${{ matrix.target }}" == *"32"* ]]; then BITS=32; else BITS=64; fi
           case "${{ matrix.mode }}" in
@@ -116,7 +115,6 @@ jobs:
           name: ${{ steps.toolchain-name-generator.outputs.TOOLCHAIN_NAME }}
           path: riscv.tar.gz
 
-
   create-release:
     needs: build
     runs-on: ubuntu-latest
@@ -126,7 +124,7 @@ jobs:
       datestamp: ${{ env.DATESTAMP }}
     steps:
 
-      - name:  Run Configuration Commands
+      - name: Run Configuration Commands
         run: |
           DATESTAMP="$(date --utc '+%Y.%m.%d')"
           echo "Version: ${DATESTAMP}-nightly"
@@ -188,12 +186,11 @@ jobs:
           echo "asset_matrix=${ASSET_MATRIX}" >> $GITHUB_OUTPUT
         shell: bash
 
-
   upload-assets:
     needs: create-release
     runs-on: ubuntu-latest
     strategy:
-      matrix: ${{ fromJson( needs.create-release.outputs.asset_matrix ) }}
+      matrix: ${{ fromJson(needs.create-release.outputs.asset_matrix) }}
     name: upload ${{ matrix.artifact }}
     steps:
 
