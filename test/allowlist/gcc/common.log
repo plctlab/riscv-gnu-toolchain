@@ -36,3 +36,49 @@ FAIL: gcc.dg/plugin/cpython-plugin-test-PyLong_FromLong.c
 # see https://github.com/riscv-collab/riscv-gnu-toolchain/pull/1531#issuecomment-2373636158
 #
 FAIL: gcc.dg/pr110279-1.c
+#
+# Broken rvv dynamic lmul
+#
+FAIL: gcc.dg/pr119160.c
+UNRESOLVED: gcc.dg/pr119160.c
+FAIL: gcc.dg/vla-1.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul-mixed-1.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-1.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-2.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-3.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-4.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-5.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-6.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-7.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-1.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-2.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-3.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-4.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-5.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul2-6.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-1.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-12.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-2.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-3.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-5.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-6.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul4-7.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul8-11.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul8-2.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul8-4.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113112-2.c
+FAIL: gcc.dg/vect/costmodel/riscv/rvv/pr113112-4.c
+FAIL: gcc.dg/tree-ssa/pr81627.c
+#
+# Execution
+#
+FAIL: g++.dg/coroutines/torture/exceptions-test-01-n4849-a.C
+FAIL: g++.dg/coroutines/torture/func-params-07.C
+FAIL: g++.dg/coroutines/torture/pr103953.C
+FAIL: g++.dg/torture/pr119610.C
+#
+# review
+#
+FAIL: g++.target/riscv/redundant-bitmap-2.C
+XPASS: g++.dg/ipa/devirt-23.C
+FAIL: g++.dg/lto/devirt-23

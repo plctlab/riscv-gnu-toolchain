@@ -10,6 +10,7 @@ FAIL: gfortran.dg/ieee/large_2.f90
 FAIL: gfortran.dg/ieee/large_3.F90
 FAIL: gfortran.dg/ieee/modes_1.f90
 FAIL: gfortran.dg/ieee/rounding_1.f90
+FAIL: gfortran.dg/specifics_1.f90
 #
 # Fails if there is no F extension
 #
@@ -72,3 +73,20 @@ UNRESOLVED: gcc.target/riscv/rvv/base/vlmul_ext-1.c
 UNRESOLVED: gcc.target/riscv/rvv/vsetvl/pr111234.c
 UNRESOLVED: gcc.target/riscv/rvv/vsetvl/pr115214.c
 UNRESOLVED: gcc.target/riscv/rvv/vsetvl/vsetvl-24.c
+FAIL: gcc.target/riscv/rvv/vtype-call-clobbered.c
+UNRESOLVED: gcc.target/riscv/rvv/vtype-call-clobbered.c
+#
+# Xthead fail
+#
+FAIL: gcc.target/riscv/rvv/xtheadvector/vlb-vsb.c
+UNRESOLVED: gcc.target/riscv/rvv/xtheadvector/vlb-vsb.c
+FAIL: gcc.target/riscv/rvv/xtheadvector/vlbu-vsb.c
+UNRESOLVED: gcc.target/riscv/rvv/xtheadvector/vlbu-vsb.c
+FAIL: gcc.target/riscv/rvv/xtheadvector/vlh-vsh.c
+UNRESOLVED: gcc.target/riscv/rvv/xtheadvector/vlh-vsh.c
+FAIL: gcc.target/riscv/rvv/xtheadvector/vlhu-vsh.c
+UNRESOLVED: gcc.target/riscv/rvv/xtheadvector/vlhu-vsh.c
+FAIL: gcc.target/riscv/rvv/xtheadvector/vlw-vsw.c
+UNRESOLVED: gcc.target/riscv/rvv/xtheadvector/vlw-vsw.c
+FAIL: gcc.target/riscv/rvv/xtheadvector/vlwu-vsw.c
+UNRESOLVED: gcc.target/riscv/rvv/xtheadvector/vlwu-vsw.c 
