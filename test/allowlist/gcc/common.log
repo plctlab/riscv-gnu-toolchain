@@ -82,3 +82,7 @@ FAIL: g++.dg/torture/pr119610.C
 FAIL: g++.target/riscv/redundant-bitmap-2.C
 XPASS: g++.dg/ipa/devirt-23.C
 FAIL: g++.dg/lto/devirt-23
+#
+# Spike
+#
+FAIL: gcc.target/riscv/rvv/autovec/bug-3.c
