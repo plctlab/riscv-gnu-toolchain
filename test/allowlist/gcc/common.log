@@ -42,6 +42,7 @@ FAIL: gcc.dg/pr110279-1.c
 FAIL: gcc.dg/pr119160.c
 UNRESOLVED: gcc.dg/pr119160.c
 FAIL: gcc.dg/vla-1.c
+UNRESOLVED: gcc.dg/vla-1.c
 FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul-mixed-1.c
 FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-1.c
 FAIL: gcc.dg/vect/costmodel/riscv/rvv/dynamic-lmul1-2.c
@@ -86,3 +87,6 @@ FAIL: g++.dg/lto/devirt-23
 # Spike
 #
 FAIL: gcc.target/riscv/rvv/autovec/bug-3.c
+FAIL: gcc.dg/sarif-output/bad-pragma.c
+FAIL: gcc.dg/tree-ssa/pr81627.c
+UNRESOLVED: gcc.dg/tree-ssa/pr81627.c

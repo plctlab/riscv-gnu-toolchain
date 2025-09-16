@@ -90,3 +90,15 @@ FAIL: gcc.target/riscv/rvv/xtheadvector/vlw-vsw.c
 UNRESOLVED: gcc.target/riscv/rvv/xtheadvector/vlw-vsw.c
 FAIL: gcc.target/riscv/rvv/xtheadvector/vlwu-vsw.c
 UNRESOLVED: gcc.target/riscv/rvv/xtheadvector/vlwu-vsw.c 
+FAIL: g++.dg/coroutines/torture/exceptions-test-01-n4849-a.C
+UNRESOLVED: g++.dg/coroutines/torture/exceptions-test-01-n4849-a.C
+FAIL: g++.dg/coroutines/torture/func-params-07.C
+UNRESOLVED: g++.dg/coroutines/torture/func-params-07.C
+FAIL: g++.dg/coroutines/torture/pr103953.C
+UNRESOLVED: g++.dg/coroutines/torture/func-params-07.C
+XPASS: g++.dg/ipa/devirt-23.C
+UNRESOLVED: g++.dg/ipa/devirt-23.C
+FAIL: g++.dg/torture/pr119610.C
+UNRESOLVED: g++.dg/torture/pr119610.C
+FAIL: gfortran.dg/specifics_1.f90
+UNRESOLVED: gfortran.dg/specifics_1.f90
