@@ -15,11 +15,6 @@
 	path = glibc
 	url = https://github.com/bminor/glibc.git
 	shallow = true
-[submodule "dejagnu"]
-	path = dejagnu
-	url = https://git.savannah.gnu.org/git/dejagnu.git
-	branch = master
-	shallow = true
 [submodule "newlib"]
 	path = newlib
 	url = https://github.com/bminor/newlib.git
@@ -58,3 +53,6 @@
 	path = uclibc-ng
 	url = https://github.com/wbx-github/uclibc-ng.git
 	shallow = true
+[submodule "dejagnu"]
+	path = dejagnu
+	url = https://git.savannah.gnu.org/git/dejagnu.git
