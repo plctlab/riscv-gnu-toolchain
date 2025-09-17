@@ -3,13 +3,13 @@
 # #1654).
 [submodule "binutils"]
 	path = binutils
-	url = https://github.com/bminor/binutils-gdb.git
-	branch = binutils-2_45-branch
+	url = https://github.com/ruyisdk/riscv-binutils.git
+	branch = p-old
 	shallow = true
 [submodule "gcc"]
 	path = gcc
-	url = https://github.com/gcc-mirror/gcc.git
-	branch = releases/gcc-15
+	url = https://github.com/ruyisdk/riscv-gcc.git
+	branch = 15.1.0
 	shallow = true
 [submodule "glibc"]
 	path = glibc
@@ -52,7 +52,7 @@
 [submodule "llvm"]
 	path = llvm
 	url = https://github.com/llvm/llvm-project.git
-	branch = release/20.x
+	branch = release/21.x
 	shallow = true
 [submodule "uclibc-ng"]
 	path = uclibc-ng
