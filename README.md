@@ -231,21 +231,22 @@ only maintained for qemu.Other simulators might get extra failures.
 #### Additional Prerequisite
 
 A helper script to setup testing environment requires
-[pyelftools](https://github.com/eliben/pyelftools).
+[pyelftools](https://github.com/eliben/pyelftools) expect
+and sphinx, sphinx_rtd_theme.
 
 On newer versions of Ubuntu, executing the following command
 should suffice:
 
-    $ sudo apt-get install python3-pyelftools
+    $ sudo apt-get install python3-pyelftools expect python3-sphinx python3-sphinx_rtd_theme
 
 On newer versions of Fedora and CentOS/RHEL OS (9 or later), executing
 the following command should suffice:
 
-    $ sudo yum install python3-pyelftools
+    $ sudo yum install python3-pyelftools expect python3-sphinx python3-sphinx_rtd_theme
 
 On Arch Linux, executing the following command should suffice:
 
-    $ sudo pacman -Syyu python-pyelftools python-sphinx python-sphinx_rtd_theme ninja
+    $ sudo pacman expect -Syyu python-pyelftools python-sphinx python-sphinx_rtd_theme ninja
 
 If your distribution/OS does not have pyelftools package, you can install
 it using PIP.
