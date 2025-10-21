@@ -4,12 +4,12 @@
 [submodule "binutils"]
 	path = binutils
 	url = https://github.com/ruyisdk/riscv-binutils.git
-	branch = p-old
+	branch = binutils-2.45
 	shallow = true
 [submodule "gcc"]
 	path = gcc
 	url = https://github.com/ruyisdk/riscv-gcc.git
-	branch = 15.1.0
+	branch = 15.2.0
 	shallow = true
 [submodule "glibc"]
 	path = glibc
