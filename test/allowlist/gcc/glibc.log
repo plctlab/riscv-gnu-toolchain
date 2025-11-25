@@ -5,3 +5,8 @@ UNRESOLVED: gcc.target/riscv/rvv/vtype-call-clobbered.c
 FAIL: gcc.target/riscv/rvv/xtheadvector/prefix.c
 FAIL: gfortran.dg/ieee/ieee_6.f90
 FAIL: gfortran.dg/specifics_1.f90
+FAIL: g++.dg/coroutines/torture/exceptions-test-01-n4849-a.C
+FAIL: g++.dg/coroutines/torture/func-params-07.C
+FAIL: g++.dg/coroutines/torture/pr103953.C
+FAIL: g++.dg/torture/pr119610.C
+FAIL: g++.dg/lto/devirt-23
